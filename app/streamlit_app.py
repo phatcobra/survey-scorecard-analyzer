@@ -201,13 +201,22 @@ if all_view:
     # Cohort-average lines. One line per branch (100 lines) is unreadable
     # spaghetti; the average per survey-step shows the comparison cleanly.
     # New-way also gets its adjusted ("truer") average.
+    # IMPORTANT: only steps where EVERY branch in the cohort contributes
+    # (min branch length). Beyond that only the downtown/uptown fixture
+    # branches have surveys, and the average would spike on composition
+    # change alone — a survivorship artifact, not a real effect.
     series = []
     def avg_line(crows, label, col):
-        by_step = {}
+        ordered = {}
         for b in {r["branch"] for r in crows}:
-            br = sorted([r for r in crows if r["branch"] == b],
-                        key=lambda r: (r["timestamp"], r["survey_id"]))
+            ordered[b] = sorted([r for r in crows if r["branch"] == b],
+                                key=lambda r: (r["timestamp"], r["survey_id"]))
+        max_step = min(len(v) for v in ordered.values())
+        by_step = {}
+        for b, br in ordered.items():
             for i, r in enumerate(br, start=1):
+                if i > max_step:
+                    break
                 v = pct(r[col])
                 if v is not None:
                     by_step.setdefault(i, []).append(v)
@@ -215,20 +224,34 @@ if all_view:
             vals = by_step[i]
             series.append({"step": i, "scorecard": sum(vals) / len(vals),
                            "method": label})
-    for cohort, label in (("old_way", "Old way — official"),
+    for cohort, label in (("old_way", "Old way"),
                           ("new_way", "New way — official")):
         crows = [r for r in brows if r.get("cohort", "new_way") == cohort]
         if crows:
             avg_line(crows, label, "scorecard_after_pct")
     new_rows = [r for r in brows if r.get("cohort", "new_way") == "new_way"]
     if new_rows and not is_old_view:
-        avg_line(new_rows, "New way — adjusted (truer)", "adjusted_after_pct")
-    st.line_chart(series, x="step", y="scorecard", color="method")
-    st.caption("Average running scorecard per survey-step across the branches "
-               "in view. Early steps swing wildly (one survey decides "
-               "everything); lines settle as surveys accumulate. The adjusted "
-               "line honors written evidence: conflicting surveys count the "
-               "way their comments read.")
+        avg_line(new_rows, "New way — adjusted", "adjusted_after_pct")
+    adf = pd.DataFrame(series)
+    abase = (alt.Chart(adf)
+             .mark_line()
+             .encode(x=alt.X("step:Q", title="Survey number (step)"),
+                     y=alt.Y("scorecard:Q", title="Avg scorecard %"),
+                     color=alt.Color("method:N", title=""),
+                     strokeDash=alt.condition(
+                         alt.datum.method == "Old way",
+                         alt.value([6, 4]), alt.value([1, 0])),
+                     tooltip=["method", "step",
+                              alt.Tooltip("scorecard:Q", format=".1f")]))
+    st.altair_chart(abase.properties(height=300), use_container_width=True)
+    st.caption("Average running scorecard per survey-step, steps 1–24: every "
+               "branch has at least 24 surveys, so each point averages the "
+               "full cohort. (Past step 24 only the downtown/uptown fixture "
+               "branches have surveys — including them spikes the average on "
+               "composition change alone, so they're excluded.) The dashed "
+               "old-way line tracks the new-way official line almost exactly: "
+               "the underlying scores are the same. The difference between "
+               "the methods isn't the scores — it's what gets surfaced.")
 else:
     # Step-numbered x-axis (readable), gold/silver threshold lines, and red
     # diamonds marking official tier crossings.
