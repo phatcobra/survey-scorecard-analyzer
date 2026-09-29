@@ -28,16 +28,6 @@ import streamlit as st
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_PATH = os.path.join(BASE, "data", "analyzed_surveys.csv")
 
-rows = load_rows()
-
-N_NEW = len({r["branch"] for r in rows if r.get("cohort", "new_way") == "new_way"})
-N_OLD = len({r["branch"] for r in rows if r.get("cohort", "new_way") == "old_way"})
-COHORT_LABELS = {
-    "compare": "Old way vs new way (comparison)",
-    "new_way": f"New way — analyzer ({N_NEW} branches)",
-    "old_way": f"Old way — scorecard only ({N_OLD} branches)",
-}
-
 
 def load_rows():
     with open(CSV_PATH, newline="", encoding="utf-8") as fh:
@@ -68,6 +58,16 @@ st.set_page_config(page_title="Survey / Scorecard Interpretation", layout="wide"
 st.title("Customer Survey Interpretation & Scorecard Impact Analyzer")
 st.caption("Synthetic data. Advisory only — exposes measurement conflicts for "
            "human review; does not change scores or decide employment outcomes.")
+
+rows = load_rows()
+
+N_NEW = len({r["branch"] for r in rows if r.get("cohort", "new_way") == "new_way"})
+N_OLD = len({r["branch"] for r in rows if r.get("cohort", "new_way") == "old_way"})
+COHORT_LABELS = {
+    "compare": "Old way vs new way (comparison)",
+    "new_way": f"New way — analyzer ({N_NEW} branches)",
+    "old_way": f"Old way — scorecard only ({N_OLD} branches)",
+}
 
 mode = st.selectbox("Method", list(COHORT_LABELS), format_func=COHORT_LABELS.get)
 
