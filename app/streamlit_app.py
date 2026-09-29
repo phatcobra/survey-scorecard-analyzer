@@ -39,25 +39,43 @@ st.caption("Synthetic data. Advisory only — exposes measurement conflicts for 
 
 rows = load_rows()
 branches = sorted({r["branch"] for r in rows})
-branch = st.selectbox("Branch", branches)
-brows = [r for r in rows if r["branch"] == branch]
-brows.sort(key=lambda r: (r["timestamp"], r["survey_id"]))
+branch = st.selectbox("Branch", ["All branches"] + branches)
+if branch == "All branches":
+    brows = sorted(rows, key=lambda r: (r["branch"], r["timestamp"], r["survey_id"]))
+    all_view = True
+else:
+    brows = sorted([r for r in rows if r["branch"] == branch],
+                   key=lambda r: (r["timestamp"], r["survey_id"]))
+    all_view = False
 
-last = brows[-1]
 conflicts = [r for r in brows if r["interpretation_status"] == "score_comment_conflict"]
 crossings = [r for r in brows if r["tier_crossed"] == "True"]
 
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Surveys", len(brows))
-c2.metric("Scorecard", f"{last['scorecard_after_pct']}%",
-          f"{last['tier_after']} (${ {'gold': 300, 'silver': 150}.get(last['tier_after'], 0)}/person)")
-c3.metric("Score/comment conflicts", len(conflicts))
-c4.metric("Tier-crossing surveys", len(crossings))
+c2.metric("Score/comment conflicts", len(conflicts))
+c3.metric("Tier-crossing surveys", len(crossings))
+if all_view:
+    c4.metric("Branches", len(branches))
+else:
+    last = brows[-1]
+    c4.metric("Scorecard", f"{last['scorecard_after_pct']}%",
+              f"{last['tier_after']} (${ {'gold': 300, 'silver': 150}.get(last['tier_after'], 0)}/person)")
 
 st.subheader("Branch scorecard over time (top-2-box % of 9–10)")
-chart_data = [{"survey": r["survey_id"], "scorecard": pct(r["scorecard_after_pct"])}
-              for r in brows]
-st.line_chart(chart_data, x="survey", y="scorecard")
+if all_view:
+    chart_data = []
+    for b in branches:
+        br = sorted([r for r in rows if r["branch"] == b],
+                    key=lambda r: (r["timestamp"], r["survey_id"]))
+        for i, r in enumerate(br):
+            chart_data.append({"step": i + 1, "scorecard": pct(r["scorecard_after_pct"]),
+                               "branch": b})
+    st.line_chart(chart_data, x="step", y="scorecard", color="branch")
+else:
+    chart_data = [{"survey": r["survey_id"], "scorecard": pct(r["scorecard_after_pct"])}
+                  for r in brows]
+    st.line_chart(chart_data, x="survey", y="scorecard")
 st.caption("Tier bands: gold ≥ 95% ($300/person), silver 90–95% ($150/person), "
            "below 90% no bonus. A single 1–8 survey can move the branch across a band.")
 
@@ -86,14 +104,14 @@ st.subheader("Tier crossings (scorecard-impact events, not interpretation proble
 if not crossings:
     st.write("None.")
 for r in crossings:
-    st.write(f"- **{r['survey_id']}**: score {r['score']}/10 ({r['official_treatment']}) moved "
+    st.write(f"- **{r['survey_id']}** ({r['branch']}): score {r['score']}/10 ({r['official_treatment']}) moved "
              f"the branch from {r['scorecard_before_pct']}% ({r['tier_before']}) to "
              f"{r['scorecard_after_pct']}% ({r['tier_after']})"
              + (" — also a score/comment conflict" if r["conflict_flag"] == "True" else ""))
 
 st.subheader("All surveys")
 st.dataframe(
-    [{"survey": r["survey_id"], "score": r["score"],
+    [{"survey": r["survey_id"], "branch": r["branch"], "score": r["score"],
       "treatment": r["official_treatment"],
       "interpretation": r["interpretation_status"],
       "conflict": r["conflict_flag"],

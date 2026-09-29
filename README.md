@@ -1,7 +1,5 @@
 # Customer Survey Interpretation & Scorecard Impact Analyzer
 
-![architecture](docs/architecture.svg)
-
 > The company asks customers for both a 1–10 score and a written comment, but only the number actually matters. An 8 counts as a failure even if the customer says the service was excellent. This system detects those contradictions and shows how much each survey affects the branch score, so managers can see when the scorecard may not accurately represent the service the customer described.
 
 **One-sentence technical version:** a survey-consistency analyzer that compares the scorecard's binary interpretation of a customer rating with the customer's written feedback and quantifies the survey's impact on aggregate performance metrics.
@@ -15,6 +13,10 @@ Branch scorecards are computed as a **top-2-box percentage**: the share of surve
 - **Scorecard sensitivity.** With a small survey count, a single response can move a branch across a bonus tier (gold ≥ 95% → $300/person; silver 90–95% → $150/person).
 
 The motivating case, reproduced as a synthetic fixture: a branch at 95.83% (gold) receives an 8/10 whose comment reads *"Excellent service and took care of all my needs."* The scorecard drops to 92.0% (silver) — a gold→silver tier crossing on a survey that describes good service.
+
+![The motivating conflict: an 8/10 officially FAILs while the comment describes excellent, resolved service — 95.83% Gold → 92.0% Silver, flagged for human review.](docs/screenshots/02-motivating-conflict.png)
+
+![Architecture: three independent dimensions in, two independent signals out.](docs/architecture.svg)
 
 ## What the system does
 
@@ -43,12 +45,18 @@ CUSTOMER SURVEY
 2. **Written-feedback evidence** — sentiment, service themes, and a resolution signal (resolved / unresolved / unknown) extracted from the comment. A blank comment is *no evidence*, never negative evidence.
 3. **Scorecard impact** — the branch scorecard before → after each survey (chronological), the percentage-point delta, and whether the survey crossed a bonus tier. An impact event, not an interpretation problem.
 
-Two independent signals come out, and a survey can carry either, both, or neither:
+Interpretation statuses: `score_comment_conflict` (either direction — a FAIL with positive resolved text, or a PASS with negative unresolved text), `consistent_with_official_treatment`, `insufficient_text_evidence`, `text_inconclusive`.
+
+![Dashboard overview: 69 surveys, 9 score/comment conflicts, 6 tier crossings.](docs/screenshots/01-dashboard-overview.png)
+
+### Two independent signals
+
+A survey can carry either, both, or neither:
 
 - `conflict_flag` — the scorecard's binary treatment of the score disagrees with the written evidence. **This is what warrants human review** (`needs_human_review`).
 - `tier_crossed` — the survey moved the branch across a bonus tier. Important to surface, but a clean 10/10 lifting a branch from silver to gold is not an interpretation problem.
 
-Interpretation statuses: `score_comment_conflict` (either direction — a FAIL with positive resolved text, or a PASS with negative unresolved text), `consistent_with_official_treatment`, `insufficient_text_evidence`, `text_inconclusive`.
+![An upward tier crossing that is not a conflict: 10/10 → PASS, 94.74% Silver → 95.0% Gold, tier_crossed=True, conflict_flag=False.](docs/screenshots/03-separated-signals.png)
 
 The original example, stated simply: the customer gave an 8 and wrote that the service was excellent and all needs were handled. The scorecard treats the 8 as a failure because only 9s and 10s count. The program doesn't change the 8 — it shows that the scorecard is treating the survey as negative while the written feedback describes a positive experience, and it shows how much that one survey moved the branch score.
 
