@@ -130,14 +130,30 @@ else:
 
 st.subheader("Branch scorecard over time (top-2-box % of 9–10)")
 if all_view:
-    chart_data = []
-    for b in sorted({r["branch"] for r in brows}):
-        br = sorted([r for r in brows if r["branch"] == b],
-                    key=lambda r: (r["timestamp"], r["survey_id"]))
-        for i, r in enumerate(br):
-            chart_data.append({"step": i + 1, "scorecard": pct(r["scorecard_after_pct"]),
-                               "branch": b})
-    st.line_chart(chart_data, x="step", y="scorecard", color="branch")
+    # Cohort-average lines. One line per branch (100 lines) is unreadable
+    # spaghetti; the average per survey-step shows the comparison cleanly.
+    series = []
+    for cohort, label in (("old_way", "Old way — branch average"),
+                          ("new_way", "New way — branch average")):
+        crows = [r for r in brows if r.get("cohort", "new_way") == cohort]
+        if not crows:
+            continue
+        by_step = {}
+        for b in {r["branch"] for r in crows}:
+            br = sorted([r for r in crows if r["branch"] == b],
+                        key=lambda r: (r["timestamp"], r["survey_id"]))
+            for i, r in enumerate(br, start=1):
+                v = pct(r["scorecard_after_pct"])
+                if v is not None:
+                    by_step.setdefault(i, []).append(v)
+        for i in sorted(by_step):
+            vals = by_step[i]
+            series.append({"step": i, "scorecard": sum(vals) / len(vals),
+                           "method": label})
+    st.line_chart(series, x="step", y="scorecard", color="method")
+    st.caption("Average running scorecard per survey-step across the branches "
+               "in view. Early steps swing wildly (one survey decides "
+               "everything); lines settle as surveys accumulate.")
 else:
     chart_data = [{"survey": r["survey_id"], "scorecard": pct(r["scorecard_after_pct"])}
                   for r in brows]
