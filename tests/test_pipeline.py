@@ -42,9 +42,34 @@ class TestPipeline(unittest.TestCase):
             self.assertIn(r.official_treatment, ("PASS", "FAIL"))
             self.assertIn(r.interpretation_status, (
                 "score_comment_conflict", "consistent_with_official_treatment",
-                "insufficient_text_evidence", "text_inconclusive"))
+                "insufficient_text_evidence", "text_inconclusive",
+                "not_screened"))
+            self.assertIn(r.cohort, ("old_way", "new_way"))
             self.assertIsNotNone(r.scorecard_after_pct)
             self.assertIn(r.tier_after, ("gold", "silver", "none"))
+
+    def test_old_way_cohort_is_never_screened(self):
+        old = [r for r in self.results if r.cohort == "old_way"]
+        new = [r for r in self.results if r.cohort == "new_way"]
+        self.assertGreater(len(old), 0)
+        self.assertGreater(len(new), 0)
+        for r in old:
+            self.assertEqual(r.interpretation_status, "not_screened")
+            self.assertFalse(r.conflict_flag)
+            self.assertFalse(r.needs_human_review)
+            # The old way still has the scorecard: impact math is intact.
+            self.assertIsNotNone(r.scorecard_after_pct)
+        # New-way cohort actually screens: some conflicts must surface.
+        self.assertGreater(
+            sum(1 for r in new
+                if r.interpretation_status == "score_comment_conflict"), 0)
+
+    def test_cohort_branch_counts(self):
+        branches = {}
+        for r in self.results:
+            branches.setdefault(r.cohort, set()).add(r.branch)
+        self.assertEqual(len(branches["old_way"]), 50)
+        self.assertEqual(len(branches["new_way"]), 50)
 
     def test_summary_counts(self):
         summary = summarize(self.results)

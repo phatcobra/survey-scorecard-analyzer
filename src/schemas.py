@@ -33,6 +33,7 @@ class Survey:
     score: int  # 1..10
     comment: str
     timestamp: str  # ISO-8601; scorecard impact is chronological, so required
+    cohort: str = "new_way"  # "new_way" (full analyzer) | "old_way" (scorecard only)
 
 
 @dataclass(frozen=True)
@@ -73,7 +74,9 @@ class InterpretationResult:
     # Interpretation of the two dimensions together.
     interpretation_status: str
     #   "score_comment_conflict" | "consistent_with_official_treatment"
-    # | "insufficient_text_evidence" | "text_inconclusive"
+    # | "insufficient_text_evidence" | "text_inconclusive" | "not_screened"
+    #   ("not_screened": old_way cohort — the scorecard-only method never
+    #    examines written feedback, so the conflict question is unasked.)
     # Dimension 3: scorecard impact (chronological, per branch).
     scorecard_before_pct: float | None
     scorecard_after_pct: float
@@ -94,3 +97,6 @@ class InterpretationResult:
     positive_themes: tuple = field(default=())
     negative_themes: tuple = field(default=())
     resolution: str = "unknown"
+    # Which method produced this row: "new_way" (full analyzer) or
+    # "old_way" (scorecard only — interpretation never screened).
+    cohort: str = "new_way"

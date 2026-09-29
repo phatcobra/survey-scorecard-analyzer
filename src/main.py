@@ -23,6 +23,7 @@ BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 COLUMNS = [
     "survey_id", "branch", "teller", "score", "comment", "timestamp",
+    "cohort",
     "official_treatment",
     "has_text", "sentiment_status", "sentiment_label",
     "positive_themes", "negative_themes", "resolution",
@@ -64,6 +65,7 @@ def main() -> None:
         for r in results:
             writer.writerow([
                 r.survey_id, r.branch, r.teller, r.score, r.comment, r.timestamp,
+                r.cohort,
                 r.official_treatment,
                 r.has_text, r.sentiment_status, r.sentiment_label,
                 ";".join(r.positive_themes), ";".join(r.negative_themes),

@@ -25,5 +25,6 @@ def load_surveys(path: str | None = None) -> list[Survey]:
                 score=int(row["score"]),
                 comment=row["comment"],
                 timestamp=row["timestamp"],
+                cohort=row.get("cohort") or "new_way",
             ))
     return surveys

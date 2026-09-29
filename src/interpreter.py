@@ -53,6 +53,38 @@ def _polarity(label: str | None) -> str:
 
 def interpret(survey: Survey, evidence: TextEvidence,
               point: ScorecardPoint) -> InterpretationResult:
+    # Old-way cohort: the scorecard-only method never examines written
+    # feedback, so the conflict question is unasked. Scorecard impact is
+    # still computed — the old way has the scorecard, just not the
+    # interpretation layer.
+    if survey.cohort == "old_way":
+        treatment = official_treatment(survey.score)
+        reason = ("Interpretation screening not applied: under the old "
+                  "scorecard-only method this survey's written feedback was "
+                  "never examined, so a score/comment conflict here would go "
+                  "unflagged. " + ADVISORY_FOOTER)
+        if point.tier_crossed:
+            reason += (f" This survey moved the branch scorecard from "
+                       f"{point.before_pct}% ({point.tier_before}) to "
+                       f"{point.after_pct}% ({point.tier_after}).")
+        return InterpretationResult(
+            survey_id=survey.survey_id, branch=survey.branch,
+            teller=survey.teller, score=survey.score, comment=survey.comment,
+            timestamp=survey.timestamp,
+            official_treatment=treatment,
+            has_text=False, sentiment_status="unavailable",
+            sentiment_label=None,
+            positive_themes=(), negative_themes=(), resolution="unknown",
+            interpretation_status="not_screened",
+            scorecard_before_pct=point.before_pct,
+            scorecard_after_pct=point.after_pct,
+            scorecard_delta_pp=point.delta_pp,
+            tier_before=point.tier_before, tier_after=point.tier_after,
+            tier_crossed=point.tier_crossed,
+            conflict_flag=False, needs_human_review=False,
+            reason=reason, cohort="old_way",
+        )
+
     treatment = official_treatment(survey.score)
     polarity = _polarity(evidence.sentiment_label)
 
@@ -131,7 +163,7 @@ def interpret(survey: Survey, evidence: TextEvidence,
         tier_before=point.tier_before, tier_after=point.tier_after,
         tier_crossed=point.tier_crossed,
         conflict_flag=conflict_flag, needs_human_review=needs_human_review,
-        reason=reason,
+        reason=reason, cohort=survey.cohort,
     )
 
 

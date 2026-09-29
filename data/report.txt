@@ -1,59 +1,846 @@
 SURVEY / SCORECARD INTERPRETATION REPORT (synthetic data)
 ============================================================
-Surveys analyzed: 69
+Surveys analyzed: 2421
 
 Branch scorecards (top-2-box % of 9-10 scores):
   downtown: 29 surveys -> 86.21% (none, $0/person)
+  new-01: 24 surveys -> 41.67% (none, $0/person)
+  new-02: 24 surveys -> 54.17% (none, $0/person)
+  new-03: 24 surveys -> 37.5% (none, $0/person)
+  new-04: 24 surveys -> 58.33% (none, $0/person)
+  new-05: 24 surveys -> 54.17% (none, $0/person)
+  new-06: 24 surveys -> 58.33% (none, $0/person)
+  new-07: 24 surveys -> 50.0% (none, $0/person)
+  new-08: 24 surveys -> 33.33% (none, $0/person)
+  new-09: 24 surveys -> 54.17% (none, $0/person)
+  new-10: 24 surveys -> 62.5% (none, $0/person)
+  new-11: 24 surveys -> 58.33% (none, $0/person)
+  new-12: 24 surveys -> 54.17% (none, $0/person)
+  new-13: 24 surveys -> 45.83% (none, $0/person)
+  new-14: 24 surveys -> 54.17% (none, $0/person)
+  new-15: 24 surveys -> 41.67% (none, $0/person)
+  new-16: 24 surveys -> 62.5% (none, $0/person)
+  new-17: 24 surveys -> 41.67% (none, $0/person)
+  new-18: 24 surveys -> 37.5% (none, $0/person)
+  new-19: 24 surveys -> 62.5% (none, $0/person)
+  new-20: 24 surveys -> 50.0% (none, $0/person)
+  new-21: 24 surveys -> 58.33% (none, $0/person)
+  new-22: 24 surveys -> 41.67% (none, $0/person)
+  new-23: 24 surveys -> 45.83% (none, $0/person)
+  new-24: 24 surveys -> 45.83% (none, $0/person)
+  new-25: 24 surveys -> 70.83% (none, $0/person)
+  new-26: 24 surveys -> 33.33% (none, $0/person)
+  new-27: 24 surveys -> 58.33% (none, $0/person)
+  new-28: 24 surveys -> 54.17% (none, $0/person)
+  new-29: 24 surveys -> 62.5% (none, $0/person)
+  new-30: 24 surveys -> 37.5% (none, $0/person)
+  new-31: 24 surveys -> 37.5% (none, $0/person)
+  new-32: 24 surveys -> 50.0% (none, $0/person)
+  new-33: 24 surveys -> 45.83% (none, $0/person)
+  new-34: 24 surveys -> 50.0% (none, $0/person)
+  new-35: 24 surveys -> 75.0% (none, $0/person)
+  new-36: 24 surveys -> 29.17% (none, $0/person)
+  new-37: 24 surveys -> 58.33% (none, $0/person)
+  new-38: 24 surveys -> 50.0% (none, $0/person)
+  new-39: 24 surveys -> 37.5% (none, $0/person)
+  new-40: 24 surveys -> 54.17% (none, $0/person)
+  new-41: 24 surveys -> 37.5% (none, $0/person)
+  new-42: 24 surveys -> 37.5% (none, $0/person)
+  new-43: 24 surveys -> 29.17% (none, $0/person)
+  new-44: 24 surveys -> 45.83% (none, $0/person)
+  new-45: 24 surveys -> 50.0% (none, $0/person)
+  new-46: 24 surveys -> 58.33% (none, $0/person)
+  new-47: 24 surveys -> 41.67% (none, $0/person)
+  new-48: 24 surveys -> 54.17% (none, $0/person)
+  old-01: 24 surveys -> 45.83% (none, $0/person)
+  old-02: 24 surveys -> 45.83% (none, $0/person)
+  old-03: 24 surveys -> 37.5% (none, $0/person)
+  old-04: 24 surveys -> 45.83% (none, $0/person)
+  old-05: 24 surveys -> 37.5% (none, $0/person)
+  old-06: 24 surveys -> 50.0% (none, $0/person)
+  old-07: 24 surveys -> 45.83% (none, $0/person)
+  old-08: 24 surveys -> 50.0% (none, $0/person)
+  old-09: 24 surveys -> 50.0% (none, $0/person)
+  old-10: 24 surveys -> 37.5% (none, $0/person)
+  old-11: 24 surveys -> 66.67% (none, $0/person)
+  old-12: 24 surveys -> 45.83% (none, $0/person)
+  old-13: 24 surveys -> 33.33% (none, $0/person)
+  old-14: 24 surveys -> 45.83% (none, $0/person)
+  old-15: 24 surveys -> 54.17% (none, $0/person)
+  old-16: 24 surveys -> 54.17% (none, $0/person)
+  old-17: 24 surveys -> 66.67% (none, $0/person)
+  old-18: 24 surveys -> 58.33% (none, $0/person)
+  old-19: 24 surveys -> 41.67% (none, $0/person)
+  old-20: 24 surveys -> 50.0% (none, $0/person)
+  old-21: 24 surveys -> 54.17% (none, $0/person)
+  old-22: 24 surveys -> 41.67% (none, $0/person)
+  old-23: 24 surveys -> 29.17% (none, $0/person)
+  old-24: 24 surveys -> 41.67% (none, $0/person)
+  old-25: 24 surveys -> 62.5% (none, $0/person)
+  old-26: 24 surveys -> 45.83% (none, $0/person)
+  old-27: 24 surveys -> 37.5% (none, $0/person)
+  old-28: 24 surveys -> 37.5% (none, $0/person)
+  old-29: 24 surveys -> 54.17% (none, $0/person)
+  old-30: 24 surveys -> 50.0% (none, $0/person)
+  old-31: 24 surveys -> 58.33% (none, $0/person)
+  old-32: 24 surveys -> 50.0% (none, $0/person)
+  old-33: 24 surveys -> 33.33% (none, $0/person)
+  old-34: 24 surveys -> 50.0% (none, $0/person)
+  old-35: 24 surveys -> 75.0% (none, $0/person)
+  old-36: 24 surveys -> 58.33% (none, $0/person)
+  old-37: 24 surveys -> 62.5% (none, $0/person)
+  old-38: 24 surveys -> 58.33% (none, $0/person)
+  old-39: 24 surveys -> 58.33% (none, $0/person)
+  old-40: 24 surveys -> 45.83% (none, $0/person)
+  old-41: 24 surveys -> 37.5% (none, $0/person)
+  old-42: 24 surveys -> 54.17% (none, $0/person)
+  old-43: 24 surveys -> 70.83% (none, $0/person)
+  old-44: 24 surveys -> 45.83% (none, $0/person)
+  old-45: 24 surveys -> 37.5% (none, $0/person)
+  old-46: 24 surveys -> 50.0% (none, $0/person)
+  old-47: 24 surveys -> 50.0% (none, $0/person)
+  old-48: 24 surveys -> 45.83% (none, $0/person)
+  old-49: 24 surveys -> 54.17% (none, $0/person)
+  old-50: 24 surveys -> 50.0% (none, $0/person)
   uptown: 40 surveys -> 57.5% (none, $0/person)
 
 Official scorecard treatment (score-only, comment-independent):
-  FAIL: 21
-  PASS: 48
+  FAIL: 1215
+  PASS: 1206
 
 Interpretation status:
-  consistent_with_official_treatment: 55
+  consistent_with_official_treatment: 814
   insufficient_text_evidence: 1
-  score_comment_conflict: 9
-  text_inconclusive: 4
+  not_screened: 1200
+  score_comment_conflict: 224
+  text_inconclusive: 182
 
 Resolution signal:
   resolved: 1
-  unknown: 62
-  unresolved: 6
+  unknown: 2314
+  unresolved: 106
 
-Tier-crossing surveys: 6
-  [s_chase8] downtown: 95.83% (gold) -> 92.0% (silver), score=8 (FAIL)
-  [s_fail2] downtown: 92.31% (silver) -> 88.89% (none), score=2 (FAIL)
-  [s0027] uptown: 100.0% (gold) -> 66.67% (none), score=5 (FAIL)
+Tier-crossing surveys: 49
+  [s2322] old-47: 100.0% (gold) -> 50.0% (none), score=1 (FAIL)
   [s0008] downtown: 100.0% (gold) -> 87.5% (none), score=7 (FAIL)
-  [s0020] downtown: 94.74% (silver) -> 95.0% (gold), score=10 (PASS)
+  [s1770] old-24: 100.0% (gold) -> 50.0% (none), score=8 (FAIL)
+  [s0742] new-29: 100.0% (gold) -> 83.33% (none), score=7 (FAIL)
+  [s0595] new-23: 100.0% (gold) -> 66.67% (none), score=8 (FAIL)
+  [s2036] old-35: 100.0% (gold) -> 75.0% (none), score=3 (FAIL)
+  [s0930] new-37: 100.0% (gold) -> 50.0% (none), score=4 (FAIL)
+  [s1338] old-06: 100.0% (gold) -> 50.0% (none), score=8 (FAIL)
+  [s0475] new-18: 100.0% (gold) -> 66.67% (none), score=7 (FAIL)
+  [s2229] old-43: 100.0% (gold) -> 80.0% (none), score=6 (FAIL)
+  [s2106] old-38: 100.0% (gold) -> 50.0% (none), score=4 (FAIL)
   [s0010] downtown: 88.89% (none) -> 90.0% (silver), score=9 (PASS)
+  [s1603] old-17: 100.0% (gold) -> 66.67% (none), score=8 (FAIL)
+  [s1026] new-41: 100.0% (gold) -> 50.0% (none), score=7 (FAIL)
+  [s2181] old-41: 100.0% (gold) -> 80.0% (none), score=2 (FAIL)
+  [s0066] new-01: 100.0% (gold) -> 50.0% (none), score=8 (FAIL)
+  [s0402] new-15: 100.0% (gold) -> 50.0% (none), score=1 (FAIL)
+  [s0788] new-31: 100.0% (gold) -> 75.0% (none), score=8 (FAIL)
+  [s1795] old-25: 100.0% (gold) -> 66.67% (none), score=2 (FAIL)
+  [s_fail2] downtown: 92.31% (silver) -> 88.89% (none), score=2 (FAIL)
+  [s2395] old-50: 100.0% (gold) -> 66.67% (none), score=8 (FAIL)
+  [s1458] old-11: 100.0% (gold) -> 50.0% (none), score=5 (FAIL)
+  [s0523] new-20: 100.0% (gold) -> 66.67% (none), score=4 (FAIL)
+  [s1674] old-20: 100.0% (gold) -> 50.0% (none), score=5 (FAIL)
+  [s1746] old-23: 100.0% (gold) -> 50.0% (none), score=1 (FAIL)
+  [s2250] old-44: 100.0% (gold) -> 50.0% (none), score=8 (FAIL)
+  [s0260] new-09: 100.0% (gold) -> 75.0% (none), score=8 (FAIL)
+  [s1075] new-43: 100.0% (gold) -> 66.67% (none), score=1 (FAIL)
+  [s1819] old-26: 100.0% (gold) -> 66.67% (none), score=2 (FAIL)
+  [s0332] new-12: 100.0% (gold) -> 75.0% (none), score=8 (FAIL)
+  [s2058] old-36: 100.0% (gold) -> 50.0% (none), score=1 (FAIL)
+  [s0020] downtown: 94.74% (silver) -> 95.0% (gold), score=10 (PASS)
+  [s0027] uptown: 100.0% (gold) -> 66.67% (none), score=5 (FAIL)
+  [s1242] old-02: 100.0% (gold) -> 50.0% (none), score=4 (FAIL)
+  [s1578] old-16: 100.0% (gold) -> 50.0% (none), score=6 (FAIL)
+  [s1194] new-48: 100.0% (gold) -> 50.0% (none), score=6 (FAIL)
+  [s0162] new-05: 100.0% (gold) -> 50.0% (none), score=7 (FAIL)
+  [s0306] new-11: 100.0% (gold) -> 50.0% (none), score=1 (FAIL)
+  [s1506] old-13: 100.0% (gold) -> 50.0% (none), score=5 (FAIL)
+  [s0812] new-32: 100.0% (gold) -> 75.0% (none), score=3 (FAIL)
+  [s_chase8] downtown: 95.83% (gold) -> 92.0% (silver), score=8 (FAIL)
+  [s0621] new-24: 100.0% (gold) -> 80.0% (none), score=8 (FAIL)
+  [s2131] old-39: 100.0% (gold) -> 66.67% (none), score=7 (FAIL)
+  [s0716] new-28: 100.0% (gold) -> 75.0% (none), score=4 (FAIL)
+  [s0378] new-14: 100.0% (gold) -> 50.0% (none), score=8 (FAIL)
+  [s0282] new-10: 100.0% (gold) -> 50.0% (none), score=4 (FAIL)
+  [s2082] old-37: 100.0% (gold) -> 50.0% (none), score=7 (FAIL)
+  [s1434] old-10: 100.0% (gold) -> 50.0% (none), score=8 (FAIL)
+  [s1362] old-07: 100.0% (gold) -> 50.0% (none), score=6 (FAIL)
 
-Score/comment conflicts: 9
-  [s0040] teller=teller_14 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+Score/comment conflicts: 224
+  [s1142] teller=teller_02 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
     comment: Perfect visit, fast and courteous.
     why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
-  [s_chase8] teller=teller_07 score=8 (FAIL) sentiment=positive resolution=resolved
-    comment: Excellent service and took care of all my needs.
-    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need resolved. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 95.83% (gold) to 92.0% (silver). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0883] teller=teller_40 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0220] teller=teller_06 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0564] teller=teller_39 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0595] teller=teller_18 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 100.0% (gold) to 66.67% (none). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0302] teller=teller_36 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
   [s0046] teller=teller_14 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0605] teller=teller_18 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0821] teller=teller_05 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1021] teller=teller_32 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0272] teller=teller_37 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0686] teller=teller_27 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0545] teller=teller_25 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0556] teller=teller_05 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0802] teller=teller_35 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1169] teller=teller_15 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1117] teller=teller_11 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0383] teller=teller_39 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0926] teller=teller_20 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0709] teller=teller_35 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0581] teller=teller_09 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0764] teller=teller_17 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0394] teller=teller_39 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1053] teller=teller_08 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0733] teller=teller_12 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0043] teller=teller_11 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0475] teller=teller_11 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 100.0% (gold) to 66.67% (none). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0290] teller=teller_36 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0370] teller=teller_23 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0271] teller=teller_37 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0222] teller=teller_14 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0997] teller=teller_17 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0853] teller=teller_02 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1067] teller=teller_32 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0953] teller=teller_27 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0728] teller=teller_37 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0497] teller=teller_23 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0156] teller=teller_17 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0093] teller=teller_17 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1133] teller=teller_02 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1188] teller=teller_33 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0066] teller=teller_14 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 100.0% (gold) to 50.0% (none). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0139] teller=teller_17 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0590] teller=teller_39 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0838] teller=teller_16 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0279] teller=teller_37 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0972] teller=teller_21 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0881] teller=teller_16 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0535] teller=teller_29 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1091] teller=teller_35 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0095] teller=teller_22 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0989] teller=teller_09 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0211] teller=teller_11 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0573] teller=teller_09 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0127] teller=teller_33 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0348] teller=teller_05 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0124] teller=teller_23 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0415] teller=teller_16 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0817] teller=teller_32 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0560] teller=teller_16 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0451] teller=teller_18 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0172] teller=teller_12 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0121] teller=teller_33 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0498] teller=teller_05 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0828] teller=teller_05 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1002] teller=teller_28 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1191] teller=teller_40 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0887] teller=teller_02 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0166] teller=teller_12 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0949] teller=teller_26 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0324] teller=teller_14 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0612] teller=teller_11 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1084] teller=teller_32 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0830] teller=teller_13 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0879] teller=teller_01 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0134] teller=teller_23 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0793] teller=teller_35 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0395] teller=teller_28 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0950] teller=teller_26 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0357] teller=teller_11 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0435] teller=teller_31 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
     comment: Excellent service, quick and professional.
     why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
   [s0060] teller=teller_14 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
     comment: Excellent service, quick and professional.
     why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0425] teller=teller_13 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0790] teller=teller_03 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0773] teller=teller_30 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0322] teller=teller_38 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0225] teller=teller_06 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0379] teller=teller_11 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0966] teller=teller_03 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0137] teller=teller_17 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0450] teller=teller_28 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0389] teller=teller_39 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0991] teller=teller_02 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0767] teller=teller_17 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0798] teller=teller_35 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0681] teller=teller_27 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0688] teller=teller_27 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0503] teller=teller_05 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0654] teller=teller_33 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0073] teller=teller_11 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0135] teller=teller_24 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0915] teller=teller_14 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1041] teller=teller_11 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0938] teller=teller_18 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0637] teller=teller_19 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0155] teller=teller_17 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1086] teller=teller_32 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0260] teller=teller_37 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 100.0% (gold) to 75.0% (none). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0314] teller=teller_13 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0169] teller=teller_24 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0286] teller=teller_10 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1136] teller=teller_01 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0431] teller=teller_17 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0762] teller=teller_17 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0870] teller=teller_01 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0690] teller=teller_35 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0876] teller=teller_01 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0130] teller=teller_33 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0299] teller=teller_21 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0084] teller=teller_24 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1027] teller=teller_17 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0971] teller=teller_28 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0483] teller=teller_34 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
   [s0039] teller=teller_13 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
     comment: Excellent service, quick and professional.
     why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
-  [s_rev10] teller=teller_03 score=10 (PASS) sentiment=negative resolution=unresolved
-    comment: Terrible experience, rude teller, they did not help with my issue at all.
-    why: Scorecard interpretation conflict: the score of 10/10 is officially a PASS — it counts toward the branch scorecard — but the customer's written feedback is negative (negative) with stated service failures (professionalism). Counting this survey as evidence of good service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
-  [s0043] teller=teller_11 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
-    comment: Excellent service, quick and professional.
-    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
-  [s0028] teller=teller_13 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+  [s0246] teller=teller_22 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
     comment: Perfect visit, fast and courteous.
     why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
   [s0063] teller=teller_12 score=7 (FAIL) sentiment=positive resolution=unknown
     comment: Very satisfied, everything was handled efficiently.
     why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1096] teller=teller_32 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0195] teller=teller_28 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0072] teller=teller_08 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0667] teller=teller_01 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1145] teller=teller_04 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0750] teller=teller_12 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0554] teller=teller_16 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0745] teller=teller_37 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0665] teller=teller_29 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0509] teller=teller_07 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0385] teller=teller_17 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1013] teller=teller_04 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0040] teller=teller_14 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0481] teller=teller_29 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0948] teller=teller_26 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0940] teller=teller_26 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0489] teller=teller_29 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0090] teller=teller_21 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0136] teller=teller_23 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0644] teller=teller_22 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0200] teller=teller_39 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0837] teller=teller_01 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0655] teller=teller_40 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1099] teller=teller_28 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0910] teller=teller_01 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0607] teller=teller_38 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1035] teller=teller_17 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0561] teller=teller_16 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0138] teller=teller_17 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0963] teller=teller_21 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0228] teller=teller_14 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0893] teller=teller_31 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1049] teller=teller_27 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0658] teller=teller_03 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0512] teller=teller_08 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1194] teller=teller_21 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 100.0% (gold) to 50.0% (none). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0078] teller=teller_24 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0880] teller=teller_13 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1007] teller=teller_32 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1101] teller=teller_28 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0955] teller=teller_28 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0625] teller=teller_17 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0335] teller=teller_27 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0287] teller=teller_29 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0540] teller=teller_29 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0586] teller=teller_39 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0592] teller=teller_09 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0487] teller=teller_19 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0162] teller=teller_12 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 100.0% (gold) to 50.0% (none). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0421] teller=teller_04 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0874] teller=teller_13 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0604] teller=teller_18 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0918] teller=teller_25 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0775] teller=teller_13 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0238] teller=teller_30 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0229] teller=teller_24 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0578] teller=teller_14 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s_rev10] teller=teller_03 score=10 (PASS) sentiment=negative resolution=unresolved
+    comment: Terrible experience, rude teller, they did not help with my issue at all.
+    why: Scorecard interpretation conflict: the score of 10/10 is officially a PASS — it counts toward the branch scorecard — but the customer's written feedback is negative (negative) with stated service failures (professionalism). Counting this survey as evidence of good service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0254] teller=teller_20 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0089] teller=teller_22 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1089] teller=teller_05 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0615] teller=teller_11 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0735] teller=teller_35 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0575] teller=teller_09 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0439] teller=teller_17 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0925] teller=teller_20 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0994] teller=teller_17 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1138] teller=teller_02 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0278] teller=teller_23 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0164] teller=teller_07 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0491] teller=teller_19 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0413] teller=teller_30 score=6 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0990] teller=teller_09 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0079] teller=teller_08 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0209] teller=teller_14 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0075] teller=teller_14 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0862] teller=teller_13 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0672] teller=teller_29 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1113] teller=teller_28 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s_chase8] teller=teller_07 score=8 (FAIL) sentiment=positive resolution=resolved
+    comment: Excellent service and took care of all my needs.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need resolved. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. This survey moved the branch scorecard from 95.83% (gold) to 92.0% (silver). Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0956] teller=teller_27 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0313] teller=teller_38 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1131] teller=teller_01 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0201] teller=teller_14 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0916] teller=teller_14 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0958] teller=teller_28 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0343] teller=teller_05 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0909] teller=teller_20 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0928] teller=teller_01 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1088] teller=teller_32 score=6 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 6/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0965] teller=teller_21 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0602] teller=teller_11 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0143] teller=teller_17 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1068] teller=teller_32 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Excellent service, quick and professional.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s1077] teller=teller_17 score=8 (FAIL) sentiment=positive resolution=unknown
+    comment: Very satisfied, everything was handled efficiently.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0829] teller=teller_32 score=7 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Great experience, the teller was friendly and knowledgeable.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0468] teller=teller_28 score=7 (FAIL) sentiment=positive resolution=unknown
+    comment: Wonderful service, all my questions were answered clearly.
+    why: Scorecard interpretation conflict: the score of 7/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.
+  [s0028] teller=teller_13 score=8 (FAIL) sentiment=strongly_positive resolution=unknown
+    comment: Perfect visit, fast and courteous.
+    why: Scorecard interpretation conflict: the score of 8/10 is officially a FAIL — it does not count toward the branch scorecard — but the customer's written feedback is positive (strongly_positive), states no service failure, and reports the need unknown. Treating this survey as evidence of poor service is not supported by the survey's own written evidence. Human review recommended. This tool does not change scores and does not decide bonuses, promotions, discipline, raises, or performance ratings.

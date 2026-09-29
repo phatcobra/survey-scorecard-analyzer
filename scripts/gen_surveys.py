@@ -1,6 +1,14 @@
 """Deterministic synthetic survey data (seed=42). All fictional.
 
-Planted fixtures (branch "downtown"):
+Two cohorts for the old-way vs new-way comparison (50 branches each):
+
+  new_way ... downtown (with planted fixtures) + uptown + 48 generated
+              branches: full analyzer (scorecard + interpretation screening).
+  old_way ... 50 generated branches: scorecard only. The interpretation
+              layer is never applied, so score/comment conflicts in these
+              branches go unflagged by construction.
+
+Planted fixtures (branch "downtown", new_way):
   s_chase8 .... the motivating scenario: branch sits at 95.83% (gold) on 24
                 surveys; an 8/10 reading "Excellent service and took care of
                 all my needs." drops it to 92.0% (silver) — a gold->silver
@@ -10,7 +18,7 @@ Planted fixtures (branch "downtown"):
   s_pass10 .... consistent PASS: 10/10 with a positive comment.
   s_empty8 .... 8/10 with a blank comment: insufficient_text_evidence.
 
-Plus random background surveys for tellers at "downtown" and "uptown".
+Plus random background surveys for the remaining branches.
 Rows are deliberately shuffled out of chronological order in the CSV.
 """
 
@@ -45,12 +53,36 @@ NEUTRAL_COMMENTS = [
 ]
 
 
-def _row(rng, sid, branch, teller, score, comment, ts):
+def _row(rng, sid, branch, teller, score, comment, ts, cohort="new_way"):
     return {
         "survey_id": sid, "branch": branch, "teller": teller,
         "score": score, "comment": comment,
         "timestamp": ts.isoformat(timespec="seconds"),
+        "cohort": cohort,
     }
+
+
+def _background_branch(brng, nxt, rows, branch, cohort, t0, n=24):
+    """Random background surveys with the uptown score/comment distribution.
+
+    Same underlying reality for both cohorts: conflicts arise naturally
+    (e.g. an 8/10 with a glowing comment). The cohorts differ only in
+    whether the interpretation layer is applied.
+    """
+    tellers = [f"teller_{brng.randint(1, 40):02d}" for _ in range(4)]
+    ts = t0
+    for _ in range(n):
+        ts += timedelta(days=brng.randint(1, 3), hours=brng.randint(0, 6))
+        score = brng.choices([10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
+                             weights=[25, 25, 12, 8, 6, 5, 5, 4, 5, 5])[0]
+        if score >= 9:
+            comment = brng.choice(POSITIVE_COMMENTS)
+        elif score >= 6:
+            comment = brng.choice(NEUTRAL_COMMENTS + POSITIVE_COMMENTS)
+        else:
+            comment = brng.choice(NEGATIVE_COMMENTS)
+        rows.append(_row(brng, nxt(), branch, brng.choice(tellers),
+                         score, comment, ts, cohort))
 
 
 def main() -> None:
@@ -116,13 +148,28 @@ def main() -> None:
         rows.append(_row(rng, nxt(), "uptown", rng.choice(tellers_ut),
                          score, comment, ts))
 
+    # --- comparison cohorts: 48 more new_way + 50 old_way branches ---
+    # Per-branch RNG streams keep the downtown/uptown rows byte-identical.
+    idx = 0
+    for i in range(1, 49):
+        idx += 1
+        brng = random.Random(SEED * 100003 + idx)
+        _background_branch(brng, nxt, rows, f"new-{i:02d}", "new_way",
+                           t0 + timedelta(days=idx))
+    for i in range(1, 51):
+        idx += 1
+        brng = random.Random(SEED * 100003 + idx)
+        _background_branch(brng, nxt, rows, f"old-{i:02d}", "old_way",
+                           t0 + timedelta(days=idx))
+
     # Deliberately out of chronological order in the CSV.
     rng.shuffle(rows)
 
     path = os.path.join(BASE, "data", "surveys.csv")
     with open(path, "w", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=[
-            "survey_id", "branch", "teller", "score", "comment", "timestamp"])
+            "survey_id", "branch", "teller", "score", "comment", "timestamp",
+            "cohort"])
         writer.writeheader()
         writer.writerows(rows)
     print(f"Wrote {path}: {len(rows)} surveys")

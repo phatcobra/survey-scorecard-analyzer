@@ -45,7 +45,7 @@ CUSTOMER SURVEY
 2. **Written-feedback evidence** — sentiment, service themes, and a resolution signal (resolved / unresolved / unknown) extracted from the comment. A blank comment is *no evidence*, never negative evidence.
 3. **Scorecard impact** — the branch scorecard before → after each survey (chronological), the percentage-point delta, and whether the survey crossed a bonus tier. An impact event, not an interpretation problem.
 
-Interpretation statuses: `score_comment_conflict` (either direction — a FAIL with positive resolved text, or a PASS with negative unresolved text), `consistent_with_official_treatment`, `insufficient_text_evidence`, `text_inconclusive`.
+Interpretation statuses: `score_comment_conflict` (either direction — a FAIL with positive resolved text, or a PASS with negative unresolved text), `consistent_with_official_treatment`, `insufficient_text_evidence`, `text_inconclusive`, `not_screened` (old-way cohort: the scorecard-only method never examines written feedback).
 
 ![Dashboard overview: 69 surveys, 9 score/comment conflicts, 6 tier crossings.](docs/screenshots/01-dashboard-overview.png)
 
@@ -83,8 +83,13 @@ Optional: `--sentiment comprehend` routes comment sentiment through Amazon Compr
 
 ## Results (synthetic data)
 
-69 surveys across 2 branches → **9 score/comment conflicts** (the planted fixture plus 8 unplanted emergent conflicts elsewhere in the synthetic dataset — demonstrating that the detector is not limited to hand-authored fixtures), **6 tier-crossing surveys**, 55 consistent, 4 inconclusive, 1 insufficient text evidence. **31/31 automated tests pass.**
+2,421 surveys across 100 branches in two cohorts of 50, generated from the same survey distributions (controlled comparison):
+
+- **New way (analyzer, 50 branches / 1,221 surveys)** → **224 score/comment conflicts** surfaced for human review (the planted fixtures plus emergent conflicts elsewhere in the synthetic dataset — demonstrating that the detector is not limited to hand-authored fixtures), **26 tier-crossing surveys**, 814 consistent, 182 inconclusive, 1 insufficient text evidence.
+- **Old way (scorecard only, 50 branches / 1,200 surveys)** → 23 tier crossings, **0 conflicts surfaced** — the interpretation layer is never applied (`interpretation_status = not_screened`), so every score/comment conflict in these branches goes unflagged by construction.
+
+**33/33 automated tests pass.**
 
 ## Resume bullet
 
-Built a survey-consistency analyzer that cross-checks a branch scorecard's binary pass/fail interpretation of 1–10 customer ratings against written-feedback evidence and quantifies each survey's marginal impact on aggregate metrics — reproducing a real-world case where an 8/10 with an "excellent service" comment dropped a branch from gold to silver bonus tier — surfacing interpretation conflicts for human review without altering scores or employment decisions. Validated on 69 synthetic surveys with 31/31 automated tests passing.
+Built a survey-consistency analyzer that cross-checks a branch scorecard's binary pass/fail interpretation of 1–10 customer ratings against written-feedback evidence and quantifies each survey's marginal impact on aggregate metrics — reproducing a real-world case where an 8/10 with an "excellent service" comment dropped a branch from gold to silver bonus tier — surfacing interpretation conflicts for human review without altering scores or employment decisions. Validated on 2,421 synthetic surveys across 100 branches in a controlled old-way-vs-new-way comparison (50 branches each): the analyzer surfaced 224 conflicts the scorecard-only method leaves buried. 33/33 automated tests passing.

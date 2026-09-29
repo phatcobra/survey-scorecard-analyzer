@@ -6,6 +6,13 @@ Run from the project root (venv):
 Reads data/analyzed_surveys.csv produced by `python3 src/main.py`.
 Advisory only: surfaces interpretation conflicts and scorecard impact
 for human review. Never changes a score or decides employment outcomes.
+
+The dataset holds two cohorts of 50 branches each:
+  new_way ... full analyzer (scorecard + interpretation screening)
+  old_way ... scorecard only; the interpretation layer is never applied,
+              so score/comment conflicts in these branches go unflagged
+              by construction. Same underlying survey distributions —
+              the cohorts differ only in the method applied.
 """
 
 from __future__ import annotations
@@ -18,6 +25,12 @@ import streamlit as st
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_PATH = os.path.join(BASE, "data", "analyzed_surveys.csv")
+
+COHORT_LABELS = {
+    "compare": "Old way vs new way (comparison)",
+    "new_way": "New way — analyzer (50 branches)",
+    "old_way": "Old way — scorecard only (50 branches)",
+}
 
 
 def load_rows():
@@ -32,21 +45,74 @@ def pct(x):
         return None
 
 
+def cohort_stats(rows, cohort):
+    rs = [r for r in rows if r.get("cohort", "new_way") == cohort]
+    branches = sorted({r["branch"] for r in rs})
+    conflicts = [r for r in rs if r["interpretation_status"] == "score_comment_conflict"]
+    crossings = [r for r in rs if r["tier_crossed"] == "True"]
+    explained = [r for r in crossings if r["conflict_flag"] == "True"]
+    return {
+        "surveys": len(rs), "branches": len(branches),
+        "conflicts": len(conflicts), "crossings": len(crossings),
+        "explained": len(explained),
+    }
+
+
 st.set_page_config(page_title="Survey / Scorecard Interpretation", layout="wide")
 st.title("Customer Survey Interpretation & Scorecard Impact Analyzer")
 st.caption("Synthetic data. Advisory only — exposes measurement conflicts for "
            "human review; does not change scores or decide employment outcomes.")
 
 rows = load_rows()
-branches = sorted({r["branch"] for r in rows})
-branch = st.selectbox("Branch", ["All branches"] + branches)
+
+mode = st.selectbox("Method", list(COHORT_LABELS), format_func=COHORT_LABELS.get)
+
+if mode == "compare":
+    old = cohort_stats(rows, "old_way")
+    new = cohort_stats(rows, "new_way")
+    st.subheader("What the new way catches that the old way buries")
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("**Old way — scorecard only** (50 branches)")
+        st.metric("Surveys (never screened)", old["surveys"])
+        st.metric("Tier crossings", old["crossings"])
+        st.metric("Conflicts surfaced", 0)
+        st.metric("Tier crossings with a flagged cause", 0)
+    with c2:
+        st.markdown("**New way — analyzer** (50 branches)")
+        st.metric("Surveys screened", new["surveys"])
+        st.metric("Tier crossings", new["crossings"])
+        st.metric("Conflicts surfaced for human review", new["conflicts"])
+        st.metric("Tier crossings with a flagged cause", new["explained"])
+    st.caption(
+        "Controlled comparison: both cohorts were generated from the same survey "
+        "distributions, so the underlying conflicts exist in both. The old-way "
+        "branches were never screened for them (interpretation_status = "
+        "'not_screened'); the new-way branches surface each one with its written "
+        "evidence and scorecard impact. A tier crossing the old way leaves "
+        "unexplained, the new way attributes to the survey that caused it.")
+    st.divider()
+
+# ---- per-cohort (or comparison-wide) branch explorer ----
+if mode == "compare":
+    brows_all = sorted(rows, key=lambda r: (r.get("cohort", ""), r["branch"],
+                                            r["timestamp"], r["survey_id"]))
+    branch_options = ["All branches"] + sorted({r["branch"] for r in rows})
+else:
+    brows_all = sorted([r for r in rows if r.get("cohort", "new_way") == mode],
+                       key=lambda r: (r["branch"], r["timestamp"], r["survey_id"]))
+    branch_options = ["All branches"] + sorted({r["branch"] for r in brows_all})
+
+branch = st.selectbox("Branch", branch_options)
 if branch == "All branches":
-    brows = sorted(rows, key=lambda r: (r["branch"], r["timestamp"], r["survey_id"]))
+    brows = brows_all
     all_view = True
 else:
-    brows = sorted([r for r in rows if r["branch"] == branch],
-                   key=lambda r: (r["timestamp"], r["survey_id"]))
+    brows = [r for r in brows_all if r["branch"] == branch]
     all_view = False
+
+is_old_view = mode == "old_way" or (
+    mode == "compare" and brows and all(r.get("cohort") == "old_way" for r in brows))
 
 conflicts = [r for r in brows if r["interpretation_status"] == "score_comment_conflict"]
 crossings = [r for r in brows if r["tier_crossed"] == "True"]
@@ -56,7 +122,7 @@ c1.metric("Surveys", len(brows))
 c2.metric("Score/comment conflicts", len(conflicts))
 c3.metric("Tier-crossing surveys", len(crossings))
 if all_view:
-    c4.metric("Branches", len(branches))
+    c4.metric("Branches", len({r["branch"] for r in brows}))
 else:
     last = brows[-1]
     c4.metric("Scorecard", f"{last['scorecard_after_pct']}%",
@@ -65,8 +131,8 @@ else:
 st.subheader("Branch scorecard over time (top-2-box % of 9–10)")
 if all_view:
     chart_data = []
-    for b in branches:
-        br = sorted([r for r in rows if r["branch"] == b],
+    for b in sorted({r["branch"] for r in brows}):
+        br = sorted([r for r in brows if r["branch"] == b],
                     key=lambda r: (r["timestamp"], r["survey_id"]))
         for i, r in enumerate(br):
             chart_data.append({"step": i + 1, "scorecard": pct(r["scorecard_after_pct"]),
@@ -80,25 +146,30 @@ st.caption("Tier bands: gold ≥ 95% ($300/person), silver 90–95% ($150/person
            "below 90% no bonus. A single 1–8 survey can move the branch across a band.")
 
 st.subheader("Surveys needing human review (score/comment conflicts)")
-flagged = [r for r in brows if r["needs_human_review"] == "True"]
-if not flagged:
-    st.write("None.")
-for r in flagged:
-    title = (f"{r['survey_id']}: score {r['score']}/10 ({r['official_treatment']}) — "
-             f"{r['interpretation_status']}"
-             + (" — TIER CROSSING" if r["tier_crossed"] == "True" else ""))
-    with st.expander(title):
-        st.write(f"**Comment:** {r['comment'] or '(blank)'}")
-        st.write(f"**Teller:** {r['teller']} · **When:** {r['timestamp']}")
-        st.write(f"**Text evidence:** sentiment={r['sentiment_label'] or 'n/a'} "
-                 f"({r['sentiment_status']}), resolution={r['resolution']}, "
-                 f"positive themes=[{r['positive_themes'] or '—'}], "
-                 f"negative themes=[{r['negative_themes'] or '—'}]")
-        before = r["scorecard_before_pct"] or "—"
-        st.write(f"**Scorecard impact:** {before}% ({r['tier_before'] or '—'}) → "
-                 f"{r['scorecard_after_pct']}% ({r['tier_after']})"
-                 + (f" — Δ {r['scorecard_delta_pp']}pp" if r["scorecard_delta_pp"] else ""))
-        st.write(f"**Finding:** {r['reason']}")
+if is_old_view:
+    st.write("The old way never screens written feedback — none of these "
+             f"{len(brows)} surveys were ever checked for score/comment conflicts. "
+             "Any conflicts in this data went unflagged by construction.")
+else:
+    flagged = [r for r in brows if r["needs_human_review"] == "True"]
+    if not flagged:
+        st.write("None.")
+    for r in flagged:
+        title = (f"{r['survey_id']}: score {r['score']}/10 ({r['official_treatment']}) — "
+                 f"{r['interpretation_status']}"
+                 + (" — TIER CROSSING" if r["tier_crossed"] == "True" else ""))
+        with st.expander(title):
+            st.write(f"**Comment:** {r['comment'] or '(blank)'}")
+            st.write(f"**Teller:** {r['teller']} · **When:** {r['timestamp']}")
+            st.write(f"**Text evidence:** sentiment={r['sentiment_label'] or 'n/a'} "
+                     f"({r['sentiment_status']}), resolution={r['resolution']}, "
+                     f"positive themes=[{r['positive_themes'] or '—'}], "
+                     f"negative themes=[{r['negative_themes'] or '—'}]")
+            before = r["scorecard_before_pct"] or "—"
+            st.write(f"**Scorecard impact:** {before}% ({r['tier_before'] or '—'}) → "
+                     f"{r['scorecard_after_pct']}% ({r['tier_after']})"
+                     + (f" — Δ {r['scorecard_delta_pp']}pp" if r["scorecard_delta_pp"] else ""))
+            st.write(f"**Finding:** {r['reason']}")
 
 st.subheader("Tier crossings (scorecard-impact events, not interpretation problems)")
 if not crossings:
@@ -133,6 +204,10 @@ with st.expander("Methodology & boundaries"):
         "negative unresolved text).\n"
         "- **Scorecard** = % of 9–10 surveys, computed chronologically per branch; "
         "each survey shows before/after/Δ and any bonus-tier crossing.\n"
+        "- **Old way vs new way** is a controlled comparison: both cohorts were "
+        "generated from the same survey distributions. Old-way branches got the "
+        "scorecard only (interpretation_status = 'not_screened'); new-way branches "
+        "got the full analyzer.\n"
         "- Blank comments are *no* evidence, not negative evidence.\n"
         "- This tool surfaces conflicts for human review. It does not alter "
         "ratings and does not decide bonuses, promotions, discipline, raises, "
