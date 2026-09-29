@@ -1,0 +1,70 @@
+survey_id,branch,teller,score,comment,timestamp
+s0040,uptown,teller_14,7,"Perfect visit, fast and courteous.",2026-02-10T11:00:00
+s0004,downtown,teller_05,9,"Perfect visit, fast and courteous.",2026-01-11T15:00:00
+s0015,downtown,teller_02,10,"Very satisfied, everything was handled efficiently.",2026-01-31T01:00:00
+s0045,uptown,teller_12,9,"Perfect visit, fast and courteous.",2026-02-19T08:00:00
+s0006,downtown,teller_01,9,"Very satisfied, everything was handled efficiently.",2026-01-13T22:00:00
+s_chase8,downtown,teller_07,8,Excellent service and took care of all my needs.,2026-02-19T11:00:00
+s0012,downtown,teller_02,10,"Perfect visit, fast and courteous.",2026-01-24T16:00:00
+s0046,uptown,teller_14,8,"Excellent service, quick and professional.",2026-02-22T12:00:00
+s0056,uptown,teller_14,9,"Perfect visit, fast and courteous.",2026-03-11T12:00:00
+s0032,uptown,teller_12,3,"Awful experience, still waiting for a callback.",2026-01-25T05:00:00
+s0064,uptown,teller_14,10,"Very satisfied, everything was handled efficiently.",2026-03-28T05:00:00
+s0051,uptown,teller_14,9,"Excellent service, quick and professional.",2026-03-01T22:00:00
+s0049,uptown,teller_12,6,It was fine.,2026-02-27T19:00:00
+s_fail2,downtown,teller_02,2,"Nobody helped me, I am still waiting for a callback.",2026-02-20T16:00:00
+s0060,uptown,teller_14,8,"Excellent service, quick and professional.",2026-03-19T21:00:00
+s0025,uptown,teller_14,10,"Great experience, the teller was friendly and knowledgeable.",2026-01-07T11:00:00
+s0039,uptown,teller_13,6,"Excellent service, quick and professional.",2026-02-08T06:00:00
+s_pass10,downtown,teller_01,10,"Great service, quick and professional, very satisfied.",2026-02-20T20:00:00
+s0026,uptown,teller_12,10,"Excellent service, quick and professional.",2026-01-08T17:00:00
+s0027,uptown,teller_11,5,"Very disappointed, the teller was confusing and slow.",2026-01-11T18:00:00
+s0003,downtown,teller_01,10,"Excellent service, quick and professional.",2026-01-10T14:00:00
+s0062,uptown,teller_13,9,"Perfect visit, fast and courteous.",2026-03-24T01:00:00
+s_rev10,downtown,teller_03,10,"Terrible experience, rude teller, they did not help with my issue at all.",2026-02-19T16:00:00
+s0050,uptown,teller_14,8,Average service today.,2026-02-28T20:00:00
+s0033,uptown,teller_11,5,"Horrible, I was ignored for too long.",2026-01-26T07:00:00
+s0034,uptown,teller_13,9,"Excellent service, quick and professional.",2026-01-29T09:00:00
+s0021,downtown,teller_02,9,"Very satisfied, everything was handled efficiently.",2026-02-09T23:00:00
+s0022,downtown,teller_02,10,"Wonderful service, all my questions were answered clearly.",2026-02-13T02:00:00
+s0044,uptown,teller_12,9,"Perfect visit, fast and courteous.",2026-02-17T03:00:00
+s0047,uptown,teller_13,10,"Wonderful service, all my questions were answered clearly.",2026-02-24T13:00:00
+s0053,uptown,teller_14,4,Rude service and my issue was never resolved.,2026-03-06T04:00:00
+s0057,uptown,teller_11,9,"Excellent service, quick and professional.",2026-03-12T13:00:00
+s0048,uptown,teller_11,9,"Excellent service, quick and professional.",2026-02-26T16:00:00
+s0018,downtown,teller_05,10,"Very satisfied, everything was handled efficiently.",2026-02-06T11:00:00
+s0059,uptown,teller_11,8,"Standard visit, nothing special.",2026-03-18T21:00:00
+s0042,uptown,teller_11,10,"Great experience, the teller was friendly and knowledgeable.",2026-02-14T16:00:00
+s0008,downtown,teller_01,7,"Awful experience, still waiting for a callback.",2026-01-16T04:00:00
+s0055,uptown,teller_13,10,"Wonderful service, all my questions were answered clearly.",2026-03-09T10:00:00
+s0061,uptown,teller_11,10,"Perfect visit, fast and courteous.",2026-03-21T01:00:00
+s0007,downtown,teller_03,10,"Very satisfied, everything was handled efficiently.",2026-01-15T03:00:00
+s0043,uptown,teller_11,7,"Excellent service, quick and professional.",2026-02-15T21:00:00
+s0031,uptown,teller_12,1,"Awful experience, still waiting for a callback.",2026-01-22T05:00:00
+s0038,uptown,teller_12,3,"Very disappointed, the teller was confusing and slow.",2026-02-05T00:00:00
+s0001,downtown,teller_02,9,"Very satisfied, everything was handled efficiently.",2026-01-08T09:00:00
+s0029,uptown,teller_13,2,"Terrible wait, nobody helped me.",2026-01-17T03:00:00
+s0037,uptown,teller_12,9,"Perfect visit, fast and courteous.",2026-02-02T20:00:00
+s0035,uptown,teller_11,10,"Perfect visit, fast and courteous.",2026-01-31T10:00:00
+s0020,downtown,teller_03,10,"Wonderful service, all my questions were answered clearly.",2026-02-08T22:00:00
+s0041,uptown,teller_11,10,"Very satisfied, everything was handled efficiently.",2026-02-11T12:00:00
+s0058,uptown,teller_14,10,"Perfect visit, fast and courteous.",2026-03-15T15:00:00
+s_empty8,downtown,teller_04,8,,2026-02-21T20:00:00
+s0011,downtown,teller_03,9,"Perfect visit, fast and courteous.",2026-01-21T12:00:00
+s0019,downtown,teller_02,10,"Excellent service, quick and professional.",2026-02-07T16:00:00
+s0024,downtown,teller_05,9,"Wonderful service, all my questions were answered clearly.",2026-02-17T08:00:00
+s0016,downtown,teller_01,9,"Very satisfied, everything was handled efficiently.",2026-02-02T03:00:00
+s0005,downtown,teller_04,9,"Perfect visit, fast and courteous.",2026-01-12T19:00:00
+s0052,uptown,teller_11,10,"Perfect visit, fast and courteous.",2026-03-04T22:00:00
+s0023,downtown,teller_05,9,"Perfect visit, fast and courteous.",2026-02-15T03:00:00
+s0009,downtown,teller_03,9,"Very satisfied, everything was handled efficiently.",2026-01-17T07:00:00
+s0017,downtown,teller_02,9,"Perfect visit, fast and courteous.",2026-02-05T08:00:00
+s0028,uptown,teller_13,8,"Perfect visit, fast and courteous.",2026-01-13T21:00:00
+s0014,downtown,teller_04,9,"Excellent service, quick and professional.",2026-01-28T22:00:00
+s0030,uptown,teller_12,10,"Wonderful service, all my questions were answered clearly.",2026-01-20T05:00:00
+s0063,uptown,teller_12,7,"Very satisfied, everything was handled efficiently.",2026-03-26T02:00:00
+s0013,downtown,teller_03,9,"Great experience, the teller was friendly and knowledgeable.",2026-01-27T16:00:00
+s0054,uptown,teller_11,10,"Wonderful service, all my questions were answered clearly.",2026-03-08T07:00:00
+s0002,downtown,teller_05,10,"Excellent service, quick and professional.",2026-01-09T10:00:00
+s0010,downtown,teller_05,9,"Wonderful service, all my questions were answered clearly.",2026-01-20T09:00:00
+s0036,uptown,teller_12,9,"Excellent service, quick and professional.",2026-02-01T15:00:00
