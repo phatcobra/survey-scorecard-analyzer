@@ -7,7 +7,7 @@ Reads data/analyzed_surveys.csv produced by `python3 src/main.py`.
 Advisory only: surfaces interpretation conflicts and scorecard impact
 for human review. Never changes a score or decides employment outcomes.
 
-The dataset holds two cohorts of 50 branches each:
+The dataset holds two cohorts of 500 branches each:
   new_way ... full analyzer (scorecard + interpretation screening)
   old_way ... scorecard only; the interpretation layer is never applied,
               so score/comment conflicts in these branches go unflagged
@@ -28,10 +28,14 @@ import streamlit as st
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CSV_PATH = os.path.join(BASE, "data", "analyzed_surveys.csv")
 
+rows = load_rows()
+
+N_NEW = len({r["branch"] for r in rows if r.get("cohort", "new_way") == "new_way"})
+N_OLD = len({r["branch"] for r in rows if r.get("cohort", "new_way") == "old_way"})
 COHORT_LABELS = {
     "compare": "Old way vs new way (comparison)",
-    "new_way": "New way — analyzer (50 branches)",
-    "old_way": "Old way — scorecard only (50 branches)",
+    "new_way": f"New way — analyzer ({N_NEW} branches)",
+    "old_way": f"Old way — scorecard only ({N_OLD} branches)",
 }
 
 
@@ -65,8 +69,6 @@ st.title("Customer Survey Interpretation & Scorecard Impact Analyzer")
 st.caption("Synthetic data. Advisory only — exposes measurement conflicts for "
            "human review; does not change scores or decide employment outcomes.")
 
-rows = load_rows()
-
 mode = st.selectbox("Method", list(COHORT_LABELS), format_func=COHORT_LABELS.get)
 
 if mode == "compare":
@@ -81,13 +83,13 @@ if mode == "compare":
     st.subheader("What the new way catches that the old way buries")
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown("**Old way — scorecard only** (50 branches)")
+        st.markdown(f"**Old way — scorecard only** ({old['branches']} branches)")
         st.metric("Surveys (never screened)", old["surveys"])
         st.metric("Tier crossings", old["crossings"])
         st.metric("Conflicts surfaced", 0)
         st.metric("Tier crossings with a flagged cause", 0)
     with c2:
-        st.markdown("**New way — analyzer** (50 branches)")
+        st.markdown(f"**New way — analyzer** ({new['branches']} branches)")
         st.metric("Surveys screened", new["surveys"])
         st.metric("Tier crossings", new["crossings"])
         st.metric("Conflicts surfaced for human review", new["conflicts"])
@@ -233,10 +235,16 @@ if all_view:
     if new_rows and not is_old_view:
         avg_line(new_rows, "New way — adjusted", "adjusted_after_pct")
     adf = pd.DataFrame(series)
+    # Zoom the y-axis to the data range so the gaps between the lines are
+    # visible (a 0–100 axis would flatten them into near-parallel lines).
+    vals = [p["scorecard"] for p in series]
+    pad = (max(vals) - min(vals)) * 0.2 or 2
+    ydom = [max(0, min(vals) - pad), min(100, max(vals) + pad)]
     abase = (alt.Chart(adf)
              .mark_line()
              .encode(x=alt.X("step:Q", title="Survey number (step)"),
-                     y=alt.Y("scorecard:Q", title="Avg scorecard %"),
+                     y=alt.Y("scorecard:Q", title="Avg scorecard %",
+                             scale=alt.Scale(domain=ydom, zero=False)),
                      color=alt.Color("method:N", title=""),
                      strokeDash=alt.condition(
                          alt.datum.method == "Old way",

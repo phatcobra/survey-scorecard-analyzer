@@ -68,8 +68,8 @@ class TestPipeline(unittest.TestCase):
         branches = {}
         for r in self.results:
             branches.setdefault(r.cohort, set()).add(r.branch)
-        self.assertEqual(len(branches["old_way"]), 50)
-        self.assertEqual(len(branches["new_way"]), 50)
+        self.assertEqual(len(branches["old_way"]), 500)
+        self.assertEqual(len(branches["new_way"]), 500)
 
     def test_summary_counts(self):
         summary = summarize(self.results)

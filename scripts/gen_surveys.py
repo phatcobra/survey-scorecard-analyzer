@@ -1,10 +1,10 @@
 """Deterministic synthetic survey data (seed=42). All fictional.
 
-Two cohorts for the old-way vs new-way comparison (50 branches each):
+Two cohorts for the old-way vs new-way comparison (500 branches each):
 
-  new_way ... downtown (with planted fixtures) + uptown + 48 generated
+  new_way ... downtown (with planted fixtures) + uptown + 498 generated
               branches: full analyzer (scorecard + interpretation screening).
-  old_way ... 50 generated branches: scorecard only. The interpretation
+  old_way ... 500 generated branches: scorecard only. The interpretation
               layer is never applied, so score/comment conflicts in these
               branches go unflagged by construction.
 
@@ -148,19 +148,27 @@ def main() -> None:
         rows.append(_row(rng, nxt(), "uptown", rng.choice(tellers_ut),
                          score, comment, ts))
 
-    # --- comparison cohorts: 48 more new_way + 50 old_way branches ---
-    # Per-branch RNG streams keep the downtown/uptown rows byte-identical.
-    idx = 0
+    # --- comparison cohorts: 498 new_way + 500 old_way branches ---
+    # Per-branch RNG streams on fixed indexes. The original 48 new_way and
+    # 50 old_way branches keep their stream indexes (1..98) and generation
+    # order, so every pre-existing row stays byte-identical (same stream ->
+    # same values, same survey_ids, same timestamps). The scale-up branches
+    # use fresh indexes 99..998.
+    def branch_rng(i):
+        return random.Random(SEED * 100003 + i)
+
     for i in range(1, 49):
-        idx += 1
-        brng = random.Random(SEED * 100003 + idx)
-        _background_branch(brng, nxt, rows, f"new-{i:02d}", "new_way",
-                           t0 + timedelta(days=idx))
+        _background_branch(branch_rng(i), nxt, rows, f"new-{i:02d}",
+                           "new_way", t0 + timedelta(days=i))
     for i in range(1, 51):
-        idx += 1
-        brng = random.Random(SEED * 100003 + idx)
-        _background_branch(brng, nxt, rows, f"old-{i:02d}", "old_way",
-                           t0 + timedelta(days=idx))
+        _background_branch(branch_rng(48 + i), nxt, rows, f"old-{i:02d}",
+                           "old_way", t0 + timedelta(days=48 + i))
+    for i in range(49, 499):
+        _background_branch(branch_rng(50 + i), nxt, rows, f"new-{i:02d}",
+                           "new_way", t0 + timedelta(days=50 + i))
+    for i in range(51, 501):
+        _background_branch(branch_rng(498 + i), nxt, rows, f"old-{i:02d}",
+                           "old_way", t0 + timedelta(days=498 + i))
 
     # Deliberately out of chronological order in the CSV.
     rng.shuffle(rows)
