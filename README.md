@@ -83,7 +83,7 @@ Optional: `--sentiment comprehend` routes comment sentiment through Amazon Compr
 
 ## Results (synthetic data)
 
-69 surveys across 2 branches → **9 score/comment conflicts** (8 unplanted emergent cases plus the planted fixture — the detector finds these in the wild, not just in fixtures), **6 tier-crossing surveys**, 55 consistent, 4 inconclusive, 1 insufficient text evidence. **31/31 automated tests pass.**
+69 surveys across 2 branches → **9 score/comment conflicts** (the planted fixture plus 8 unplanted emergent conflicts elsewhere in the synthetic dataset — demonstrating that the detector is not limited to hand-authored fixtures), **6 tier-crossing surveys**, 55 consistent, 4 inconclusive, 1 insufficient text evidence. **31/31 automated tests pass.**
 
 ## Resume bullet
 
