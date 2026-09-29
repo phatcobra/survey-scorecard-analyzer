@@ -21,6 +21,8 @@ import csv
 import os
 from collections import Counter
 
+import altair as alt
+import pandas as pd
 import streamlit as st
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -121,7 +123,8 @@ if branch == "All branches":
     brows = brows_all
     all_view = True
 else:
-    brows = [r for r in brows_all if r["branch"] == branch]
+    brows = sorted([r for r in brows_all if r["branch"] == branch],
+                   key=lambda r: (r["timestamp"], r["survey_id"]))
     all_view = False
 
 is_old_view = mode == "old_way" or (
@@ -138,13 +141,60 @@ if all_view:
     c4.metric("Branches", len({r["branch"] for r in brows}))
 else:
     last = brows[-1]
-    if is_old_view:
-        c4.metric("Scorecard", f"{last['scorecard_after_pct']}%",
-                  f"{last['tier_after']} (${ {'gold': 300, 'silver': 150}.get(last['tier_after'], 0)}/person)")
+    bonus = {'gold': 300, 'silver': 150}.get(last['tier_after'], 0)
+    agree = (last["scorecard_after_pct"] == last["adjusted_after_pct"]
+             and last["tier_after"] == last["adjusted_tier_after"])
+    if is_old_view or agree:
+        c4.metric("Scorecard (final)", f"{last['scorecard_after_pct']}%",
+                  f"{last['tier_after']} (${bonus}/person)")
     else:
         c4.metric("Official → Adjusted",
                   f"{last['scorecard_after_pct']}% → {last['adjusted_after_pct']}%",
                   f"{last['tier_after']} → {last['adjusted_tier_after']}")
+
+def key_moments(brows):
+    """Plain-English descriptions of surveys where the adjusted scorecard
+    disagrees with the official one."""
+    msgs = []
+    for i, r in enumerate(brows, start=1):
+        if r["interpretation_status"] != "score_comment_conflict":
+            continue
+        off_cross = r["tier_crossed"] == "True"
+        adj_cross = r["adjusted_tier_crossed"] == "True"
+        if not (off_cross or adj_cross):
+            continue
+        positive = r["official_treatment"] == "FAIL"
+        reads = "glowing" if positive else "hostile"
+        counts_as = "a pass" if positive else "a fail"
+        if off_cross and not adj_cross:
+            msgs.append(
+                f"Survey {i} ({r['survey_id']}): scored {r['score']}/10 with a "
+                f"{reads} comment. The official scorecard moved the branch "
+                f"{r['tier_before']} → {r['tier_after']} "
+                f"({r['scorecard_before_pct']}% → {r['scorecard_after_pct']}%). "
+                f"The adjusted scorecard counts it as {counts_as} — "
+                f"{r['adjusted_tier_before']} → {r['adjusted_tier_after']} "
+                f"({r['adjusted_before_pct']}% → {r['adjusted_after_pct']}%), "
+                f"no tier crossing.")
+        elif adj_cross and not off_cross:
+            msgs.append(
+                f"Survey {i} ({r['survey_id']}): scored {r['score']}/10 with a "
+                f"{reads} comment. The official scorecard shows no tier "
+                f"crossing ({r['tier_before']} → {r['tier_after']}), but the "
+                f"adjusted scorecard — counting it as {counts_as} — moves the "
+                f"branch {r['adjusted_tier_before']} → {r['adjusted_tier_after']} "
+                f"({r['adjusted_before_pct']}% → {r['adjusted_after_pct']}%).")
+    return msgs
+
+
+if not all_view and not is_old_view:
+    moments = key_moments(brows)
+    if moments:
+        st.subheader("Key moments — where the two scorecards disagree")
+        for m in moments[:3]:
+            st.info(m)
+        if len(moments) > 3:
+            st.caption(f"+ {len(moments) - 3} more — see the survey list below.")
 
 st.subheader("Branch scorecard over time (top-2-box % of 9–10)")
 if all_view:
@@ -180,16 +230,47 @@ if all_view:
                "line honors written evidence: conflicting surveys count the "
                "way their comments read.")
 else:
-    chart_data = []
-    for r in brows:
-        chart_data.append({"survey": r["survey_id"],
-                           "scorecard": pct(r["scorecard_after_pct"]),
-                           "view": "Official"})
+    # Step-numbered x-axis (readable), gold/silver threshold lines, and red
+    # diamonds marking official tier crossings.
+    df_rows = []
+    for i, r in enumerate(brows, start=1):
+        df_rows.append({"step": i, "scorecard": pct(r["scorecard_after_pct"]),
+                        "view": "Official", "survey": r["survey_id"],
+                        "score": r["score"]})
         if not is_old_view:
-            chart_data.append({"survey": r["survey_id"],
-                               "scorecard": pct(r["adjusted_after_pct"]),
-                               "view": "Adjusted (truer)"})
-    st.line_chart(chart_data, x="survey", y="scorecard", color="view")
+            df_rows.append({"step": i,
+                            "scorecard": pct(r["adjusted_after_pct"]),
+                            "view": "Adjusted (truer)", "survey": r["survey_id"],
+                            "score": r["score"]})
+    df = pd.DataFrame(df_rows)
+    lines = (alt.Chart(df)
+             .mark_line()
+             .encode(x=alt.X("step:Q", title="Survey number"),
+                     y=alt.Y("scorecard:Q", title="Scorecard %",
+                             scale=alt.Scale(domain=[0, 100])),
+                     color=alt.Color("view:N", title=""),
+                     tooltip=["survey", "score", "scorecard"]))
+    gold = (alt.Chart(pd.DataFrame({"y": [95]}))
+            .mark_rule(strokeDash=[6, 4], color="darkgoldenrod")
+            .encode(y="y:Q"))
+    silver = (alt.Chart(pd.DataFrame({"y": [90]}))
+              .mark_rule(strokeDash=[6, 4], color="gray")
+              .encode(y="y:Q"))
+    layers = [lines, gold, silver]
+    cross = [{"step": i, "scorecard": pct(r["scorecard_after_pct"])}
+             for i, r in enumerate(brows, start=1)
+             if r["tier_crossed"] == "True"]
+    if cross:
+        layers.append(
+            alt.Chart(pd.DataFrame(cross))
+            .mark_point(size=90, shape="diamond", color="firebrick")
+            .encode(x="step:Q", y="scorecard:Q",
+                    tooltip=[alt.Tooltip("step:Q", title="Survey number")]))
+    st.altair_chart(alt.layer(*layers).properties(height=320),
+                    use_container_width=True)
+    st.caption("Dashed lines: gold threshold (95%) and silver threshold (90%). "
+               "Red diamonds: official tier crossings. Hover any point for the "
+               "survey ID and score.")
 st.caption("Tier bands: gold ≥ 95% ($300/person), silver 90–95% ($150/person), "
            "below 90% no bonus. A single 1–8 survey can move the branch across a band.")
 
