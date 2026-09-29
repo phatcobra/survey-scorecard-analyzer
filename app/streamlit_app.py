@@ -70,6 +70,12 @@ mode = st.selectbox("Method", list(COHORT_LABELS), format_func=COHORT_LABELS.get
 if mode == "compare":
     old = cohort_stats(rows, "old_way")
     new = cohort_stats(rows, "new_way")
+    new_rows = [r for r in rows if r.get("cohort", "new_way") == "new_way"]
+    reclassified = sum(1 for r in new_rows
+                       if r["interpretation_status"] == "score_comment_conflict")
+    avoided = sum(1 for r in new_rows
+                  if r["tier_crossed"] == "True"
+                  and r["adjusted_tier_crossed"] != "True")
     st.subheader("What the new way catches that the old way buries")
     c1, c2 = st.columns(2)
     with c1:
@@ -84,13 +90,20 @@ if mode == "compare":
         st.metric("Tier crossings", new["crossings"])
         st.metric("Conflicts surfaced for human review", new["conflicts"])
         st.metric("Tier crossings with a flagged cause", new["explained"])
+    st.markdown("**Adjusted (\"truer\") scorecard** — what the branch scorecards "
+                "would look like if written evidence were honored:")
+    a1, a2 = st.columns(2)
+    a1.metric("Surveys reclassified by written evidence", reclassified)
+    a2.metric("Official tier crossings the adjusted view avoids", avoided)
     st.caption(
         "Controlled comparison: both cohorts were generated from the same survey "
         "distributions, so the underlying conflicts exist in both. The old-way "
         "branches were never screened for them (interpretation_status = "
         "'not_screened'); the new-way branches surface each one with its written "
-        "evidence and scorecard impact. A tier crossing the old way leaves "
-        "unexplained, the new way attributes to the survey that caused it.")
+        "evidence and scorecard impact. The adjusted scorecard is a what-if view: "
+        "a conflicting survey counts the way its written evidence reads "
+        "(an 8/10 with a great comment counts as a pass). The official scorecard "
+        "is never altered.")
     st.divider()
 
 # ---- per-cohort (or comparison-wide) branch explorer ----
@@ -125,39 +138,58 @@ if all_view:
     c4.metric("Branches", len({r["branch"] for r in brows}))
 else:
     last = brows[-1]
-    c4.metric("Scorecard", f"{last['scorecard_after_pct']}%",
-              f"{last['tier_after']} (${ {'gold': 300, 'silver': 150}.get(last['tier_after'], 0)}/person)")
+    if is_old_view:
+        c4.metric("Scorecard", f"{last['scorecard_after_pct']}%",
+                  f"{last['tier_after']} (${ {'gold': 300, 'silver': 150}.get(last['tier_after'], 0)}/person)")
+    else:
+        c4.metric("Official → Adjusted",
+                  f"{last['scorecard_after_pct']}% → {last['adjusted_after_pct']}%",
+                  f"{last['tier_after']} → {last['adjusted_tier_after']}")
 
 st.subheader("Branch scorecard over time (top-2-box % of 9–10)")
 if all_view:
     # Cohort-average lines. One line per branch (100 lines) is unreadable
     # spaghetti; the average per survey-step shows the comparison cleanly.
+    # New-way also gets its adjusted ("truer") average.
     series = []
-    for cohort, label in (("old_way", "Old way — branch average"),
-                          ("new_way", "New way — branch average")):
-        crows = [r for r in brows if r.get("cohort", "new_way") == cohort]
-        if not crows:
-            continue
+    def avg_line(crows, label, col):
         by_step = {}
         for b in {r["branch"] for r in crows}:
             br = sorted([r for r in crows if r["branch"] == b],
                         key=lambda r: (r["timestamp"], r["survey_id"]))
             for i, r in enumerate(br, start=1):
-                v = pct(r["scorecard_after_pct"])
+                v = pct(r[col])
                 if v is not None:
                     by_step.setdefault(i, []).append(v)
         for i in sorted(by_step):
             vals = by_step[i]
             series.append({"step": i, "scorecard": sum(vals) / len(vals),
                            "method": label})
+    for cohort, label in (("old_way", "Old way — official"),
+                          ("new_way", "New way — official")):
+        crows = [r for r in brows if r.get("cohort", "new_way") == cohort]
+        if crows:
+            avg_line(crows, label, "scorecard_after_pct")
+    new_rows = [r for r in brows if r.get("cohort", "new_way") == "new_way"]
+    if new_rows and not is_old_view:
+        avg_line(new_rows, "New way — adjusted (truer)", "adjusted_after_pct")
     st.line_chart(series, x="step", y="scorecard", color="method")
     st.caption("Average running scorecard per survey-step across the branches "
                "in view. Early steps swing wildly (one survey decides "
-               "everything); lines settle as surveys accumulate.")
+               "everything); lines settle as surveys accumulate. The adjusted "
+               "line honors written evidence: conflicting surveys count the "
+               "way their comments read.")
 else:
-    chart_data = [{"survey": r["survey_id"], "scorecard": pct(r["scorecard_after_pct"])}
-                  for r in brows]
-    st.line_chart(chart_data, x="survey", y="scorecard")
+    chart_data = []
+    for r in brows:
+        chart_data.append({"survey": r["survey_id"],
+                           "scorecard": pct(r["scorecard_after_pct"]),
+                           "view": "Official"})
+        if not is_old_view:
+            chart_data.append({"survey": r["survey_id"],
+                               "scorecard": pct(r["adjusted_after_pct"]),
+                               "view": "Adjusted (truer)"})
+    st.line_chart(chart_data, x="survey", y="scorecard", color="view")
 st.caption("Tier bands: gold ≥ 95% ($300/person), silver 90–95% ($150/person), "
            "below 90% no bonus. A single 1–8 survey can move the branch across a band.")
 
@@ -220,6 +252,13 @@ with st.expander("Methodology & boundaries"):
         "negative unresolved text).\n"
         "- **Scorecard** = % of 9–10 surveys, computed chronologically per branch; "
         "each survey shows before/after/Δ and any bonus-tier crossing.\n"
+        "- **Adjusted (\"truer\") scorecard** = a what-if view honoring written "
+        "evidence. Rule (deterministic, explicit): a `score_comment_conflict` "
+        "survey counts the way its comment reads — an 8/10 with a great comment "
+        "counts as a pass, a 10/10 with a hostile unresolved comment counts as "
+        "a fail. Every other status keeps the official treatment: no evidence, "
+        "no adjustment. The official scorecard is never altered; the adjusted "
+        "columns sit alongside it.\n"
         "- **Old way vs new way** is a controlled comparison: both cohorts were "
         "generated from the same survey distributions. Old-way branches got the "
         "scorecard only (interpretation_status = 'not_screened'); new-way branches "

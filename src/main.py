@@ -11,12 +11,14 @@ import argparse
 import csv
 import os
 import sys
+from dataclasses import replace
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.ingest import load_surveys  # noqa: E402
 from src.interpreter import analyze  # noqa: E402
 from src.report import render_text, summarize  # noqa: E402
+from src.scorecard import running_adjusted_scorecard  # noqa: E402
 from src.sentiment import ComprehendProvider, RuleBasedProvider  # noqa: E402
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,6 +32,8 @@ COLUMNS = [
     "interpretation_status",
     "scorecard_before_pct", "scorecard_after_pct", "scorecard_delta_pp",
     "tier_before", "tier_after", "tier_crossed",
+    "adjusted_before_pct", "adjusted_after_pct", "adjusted_delta_pp",
+    "adjusted_tier_before", "adjusted_tier_after", "adjusted_tier_crossed",
     "conflict_flag", "needs_human_review", "reason",
 ]
 
@@ -57,6 +61,23 @@ def main() -> None:
 
     surveys = load_surveys(input_path)
     results = analyze(surveys, provider=provider)
+
+    # Adjusted ("truer") scorecard view: computed after interpretation, kept
+    # strictly separate from the official scorecard. The official fields are
+    # never altered.
+    adj_points = running_adjusted_scorecard(results)
+    results = [
+        replace(
+            r,
+            adjusted_before_pct=adj_points[r.survey_id].before_pct,
+            adjusted_after_pct=adj_points[r.survey_id].after_pct,
+            adjusted_delta_pp=adj_points[r.survey_id].delta_pp,
+            adjusted_tier_before=adj_points[r.survey_id].tier_before,
+            adjusted_tier_after=adj_points[r.survey_id].tier_after,
+            adjusted_tier_crossed=adj_points[r.survey_id].tier_crossed,
+        )
+        for r in results
+    ]
     summary = summarize(results)
 
     with open(output_path, "w", newline="", encoding="utf-8") as fh:
@@ -73,6 +94,9 @@ def main() -> None:
                 r.interpretation_status,
                 r.scorecard_before_pct, r.scorecard_after_pct, r.scorecard_delta_pp,
                 r.tier_before, r.tier_after, r.tier_crossed,
+                r.adjusted_before_pct, r.adjusted_after_pct, r.adjusted_delta_pp,
+                r.adjusted_tier_before, r.adjusted_tier_after,
+                r.adjusted_tier_crossed,
                 r.conflict_flag, r.needs_human_review, r.reason,
             ])
 

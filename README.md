@@ -64,9 +64,8 @@ The original example, stated simply: the customer gave an 8 and wrote that the s
 
 Because these metrics touch employment outcomes, the boundary is hard:
 
-- It never changes a score, suggests a score change, or reclassifies a PASS/FAIL.
-- It never decides bonuses, promotions, discipline, raises, or performance ratings.
-- Every conflict rationale ends with an explicit advisory footer: *Human review recommended.*
+- It never changes a score or the official PASS/FAIL treatment, and never decides bonuses, promotions, discipline, raises, or performance ratings.
+- It does show one explicit what-if: the **adjusted ("truer") scorecard**, where a `score_comment_conflict` survey counts the way its written evidence reads (an 8/10 with a great comment counts as a pass; a 10/10 with a hostile unresolved comment counts as a fail). Deterministic rule, separate columns, official scorecard untouched — every conflict rationale still ends with an explicit advisory footer: *Human review recommended.*
 
 ## Quickstart (deterministic)
 
@@ -88,8 +87,10 @@ Optional: `--sentiment comprehend` routes comment sentiment through Amazon Compr
 - **New way (analyzer, 50 branches / 1,221 surveys)** → **224 score/comment conflicts** surfaced for human review (the planted fixtures plus emergent conflicts elsewhere in the synthetic dataset — demonstrating that the detector is not limited to hand-authored fixtures), **26 tier-crossing surveys**, 814 consistent, 182 inconclusive, 1 insufficient text evidence.
 - **Old way (scorecard only, 50 branches / 1,200 surveys)** → 23 tier crossings, **0 conflicts surfaced** — the interpretation layer is never applied (`interpretation_status = not_screened`), so every score/comment conflict in these branches goes unflagged by construction.
 
-**33/33 automated tests pass.**
+**Adjusted ("truer") scorecard (new way):** 224 surveys reclassified by their written evidence; 7 official tier crossings avoided in the adjusted view. The motivating case: the 8/10 with "Excellent service and took care of all my needs." drops downtown 95.83% gold → 92.0% silver officially, but 95.83% gold → 96.0% gold adjusted — the branch keeps the tier its customers' words say it earned.
+
+**40/40 automated tests pass.**
 
 ## Resume bullet
 
-Built a survey-consistency analyzer that cross-checks a branch scorecard's binary pass/fail interpretation of 1–10 customer ratings against written-feedback evidence and quantifies each survey's marginal impact on aggregate metrics — reproducing a real-world case where an 8/10 with an "excellent service" comment dropped a branch from gold to silver bonus tier — surfacing interpretation conflicts for human review without altering scores or employment decisions. Validated on 2,421 synthetic surveys across 100 branches in a controlled old-way-vs-new-way comparison (50 branches each): the analyzer surfaced 224 conflicts the scorecard-only method leaves buried. 33/33 automated tests passing.
+Built a survey-consistency analyzer that cross-checks a branch scorecard's binary pass/fail interpretation of 1–10 customer ratings against written-feedback evidence and quantifies each survey's marginal impact on aggregate metrics — reproducing a real-world case where an 8/10 with an "excellent service" comment dropped a branch from gold to silver bonus tier — surfacing interpretation conflicts for human review without altering scores or employment decisions. Validated on 2,421 synthetic surveys across 100 branches in a controlled old-way-vs-new-way comparison (50 branches each): the analyzer surfaced 224 conflicts the scorecard-only method leaves buried, and the adjusted "truer" scorecard shows the motivating 8/10 keeping its branch at gold (96.0%) instead of dropping it to silver (92.0%). 40/40 automated tests passing.

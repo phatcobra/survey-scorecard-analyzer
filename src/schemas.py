@@ -100,3 +100,14 @@ class InterpretationResult:
     # Which method produced this row: "new_way" (full analyzer) or
     # "old_way" (scorecard only — interpretation never screened).
     cohort: str = "new_way"
+    # Adjusted ("truer") scorecard view: what the branch scorecard would
+    # look like if written evidence were honored (see
+    # scorecard.adjusted_treatment). The official scorecard fields above
+    # are never altered; this is a separate what-if view, filled by the
+    # pipeline after interpretation.
+    adjusted_before_pct: float | None = None
+    adjusted_after_pct: float | None = None
+    adjusted_delta_pp: float | None = None
+    adjusted_tier_before: str | None = None
+    adjusted_tier_after: str | None = None
+    adjusted_tier_crossed: bool = False

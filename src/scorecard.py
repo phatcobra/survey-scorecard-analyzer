@@ -46,6 +46,65 @@ def bonus_for(tier: str | None) -> int:
     return 0
 
 
+def adjusted_treatment(official: str, interpretation_status: str) -> str:
+    """What-if treatment honoring the survey's written evidence.
+
+    Only a score_comment_conflict flips the treatment: the binary
+    interpretation is backwards relative to the survey's own words
+    (FAIL with positive resolved text -> PASS; PASS with negative
+    unresolved text -> FAIL). Every other status — consistent,
+    inconclusive, insufficient evidence, not_screened — keeps the
+    official treatment: no evidence, no adjustment.
+
+    Deterministic and fully explicit. The official treatment is never
+    altered; this feeds a separate, clearly-labeled adjusted view.
+    """
+    if interpretation_status == "score_comment_conflict":
+        return "FAIL" if official == "PASS" else "PASS"
+    return official
+
+
+def running_adjusted_scorecard(results: list) -> dict[str, ScorecardPoint]:
+    """Per-survey adjusted scorecard, chronological per branch.
+
+    Takes InterpretationResults (which carry official_treatment and
+    interpretation_status) and returns {survey_id: ScorecardPoint} computed
+    with adjusted_treatment instead of the official pass/fail. Old-way rows
+    (not_screened) adjust to their official treatment — no evidence was
+    examined, so nothing changes.
+    """
+    by_branch: dict[str, list] = {}
+    for r in results:
+        by_branch.setdefault(r.branch, []).append(r)
+
+    points: dict[str, ScorecardPoint] = {}
+    for branch, branch_results in by_branch.items():
+        ordered = sorted(branch_results,
+                         key=lambda r: (r.timestamp, r.survey_id))
+        passing, total = 0, 0
+        for r in ordered:
+            before = scorecard_pct(passing, total)
+            if adjusted_treatment(r.official_treatment,
+                                  r.interpretation_status) == "PASS":
+                passing += 1
+            total += 1
+            after = scorecard_pct(passing, total)
+            assert after is not None
+            delta = after - before if before is not None else None
+            t_before, t_after = tier_for(before), tier_for(after)
+            assert t_after is not None
+            crossed = t_before is not None and t_before != t_after
+            points[r.survey_id] = ScorecardPoint(
+                before_pct=round(before, 2) if before is not None else None,
+                after_pct=round(after, 2),
+                delta_pp=round(delta, 2) if delta is not None else None,
+                tier_before=t_before,
+                tier_after=t_after,
+                tier_crossed=crossed,
+            )
+    return points
+
+
 def scorecard_pct(passing: int, total: int) -> float | None:
     if total == 0:
         return None
